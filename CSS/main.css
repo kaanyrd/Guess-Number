@@ -1,6 +1,224 @@
 /* GOOGLE FONTS ADDED */
-@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+:root {
+  --transitionLinear: all 0.3s ease-in-out;
+}
+
+/* FIXME */
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-  font-family: "Luckiest Guy", cursive;
+  font-family: "Lobster", cursive;
+  /* font-family: "Luckiest Guy", cursive; */
+  line-height: 1.5;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  /* border: 5px solid blue; */
+  background-color: rgb(30, 30, 30);
+  min-height: 100vh;
+  display: flex;
+  place-items: center;
+  /* background: rgb(22, 114, 22); */
+}
+.app-center {
+  max-width: 1170px;
+  width: 90vw;
+  margin: 0 auto;
+  border: 8px solid white;
+  border-radius: 10px;
+  padding: 0.5rem;
+  color: white;
+}
+.app-center > * {
+  /* border: 3px solid yellow; */
+}
+.top-side {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn {
+  padding: 0.5rem 1.2rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  display: inline-block;
+  cursor: pointer;
+  color: black;
+  background-color: #f1f5f8;
+  transition: var(--transitionLinear);
+  border-radius: 5px;
+  border: none;
+}
+.again {
+  background-color: rgb(255, 165, 0);
+  color: black;
+}
+.again:hover {
+  background-color: rgb(195, 127, 0);
+  /* background-color: rgb(203, 223, 255); */
+}
+.game-info {
+  font-size: 1.5rem;
+}
+.guess-side {
+  text-align: center;
+}
+.main-title {
+  font-size: 3rem;
+  text-transform: capitalize;
+}
+.secret-number {
+  border: none;
+  border-radius: 10px;
+  /* border: 10px solid rgb(240, 179, 65); */
+  margin: 0 auto;
+  width: 9rem;
+  font-size: 5rem;
+  background-color: #fff;
+  color: rgb(30, 30, 30);
+}
+.input-side {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.input {
+  height: 5rem;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 5px solid white;
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  max-width: 12rem;
+  margin: 0 auto 1rem auto;
+  /* margin-bottom: 1rem; */
+}
+.check {
+  width: 9rem;
+  text-align: center;
+  margin: 0 auto;
+  background-color: rgb(214, 0, 37);
+  color: white;
+}
+.check:hover {
+  /* color: white; */
+  background-color: rgb(164, 0, 27);
+  color: white;
+}
+.score-info {
+  padding: 0.5rem 0;
+  text-align: center;
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+/* FIXME */
+@media screen and (max-width: 400px) {
+  .app-center {
+    border: none;
+  }
+  .top-side {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 670px) {
+  .bottom-side {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .score-info {
+    font-size: 1.7rem;
+  }
+  .btn {
+    text-align: center;
+    width: 10rem;
+    font-size: 1.8rem;
+  }
+  .game-info {
+    font-size: 2rem;
+  }
+  .secret-number {
+    font-size: 6rem;
+  }
+  .main-title {
+    font-size: 4rem;
+  }
+}
+@media screen and (min-width: 1170px) {
+  .app-center {
+    overflow-x: hidden;
+  }
+  .main-title {
+    font-size: 4.3rem;
+  }
+  .score-info {
+    animation-name: rightSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .input-side {
+    animation-name: leftSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .again {
+    animation-name: leftSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .game-info {
+    animation-name: rightSide;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+  }
+  .score-info {
+    border: 3px dashed white;
+    padding: 0.5rem 2rem;
+  }
+  #secret-number {
+    transition: all 0.8s ease-in-out;
+  }
+  #secret-number:hover {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes rightSide {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes leftSide {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }
