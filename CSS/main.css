@@ -75,6 +75,12 @@ a {
 }
 .game-info {
   font-size: 1.5rem;
+  transition: all 0.2s linear;
+}
+.game-info:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 2px 0px orange;
+  /* transform: scale(1.08); */
 }
 .guess-side {
   text-align: center;
@@ -82,6 +88,28 @@ a {
 .main-title {
   font-size: 3rem;
   text-transform: capitalize;
+  transition: var(--transitionLinear);
+}
+.main-title:hover {
+  color: orange;
+}
+.score-info-text {
+  transition: var(--transitionLinear);
+}
+.score-info-text:hover {
+  color: orange;
+}
+.score {
+  transition: var(--transitionLinear);
+}
+.score:hover {
+  color: tomato;
+}
+.highScore {
+  transition: var(--transitionLinear);
+}
+.highScore:hover {
+  color: blue;
 }
 .secret-number {
   border: none;
