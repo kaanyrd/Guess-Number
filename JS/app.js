@@ -42,7 +42,7 @@ checkBtn.addEventListener("click", () => {
     }
   } else if (input > randomNumber) {
     if (score > 1) {
-      messageFunction("📈 Your choice hight");
+      messageFunction("📈 Your choice high");
       score--;
       scoreNumber.textContent = score;
       inputValue.value = "";
