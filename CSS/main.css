@@ -139,6 +139,18 @@ a {
   margin: 0 auto 1rem auto;
   /* margin-bottom: 1rem; */
 }
+.input::-webkit-input-placeholder {
+  color: white;
+}
+.input::-moz-placeholder {
+  color: white;
+}
+.input:-ms-input-placeholder {
+  color: white;
+}
+.input::-ms-input-placeholder {
+  color: white;
+}
 .input::placeholder {
   color: white;
 }
@@ -201,23 +213,35 @@ a {
     font-size: 4.3rem;
   }
   .score-info {
+    -webkit-animation-name: rightSide;
     animation-name: rightSide;
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
   .input-side {
+    -webkit-animation-name: leftSide;
     animation-name: leftSide;
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
   .again {
+    -webkit-animation-name: leftSide;
     animation-name: leftSide;
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
   .game-info {
+    -webkit-animation-name: rightSide;
     animation-name: rightSide;
+    -webkit-animation-duration: 1.5s;
     animation-duration: 1.5s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
   }
   .score-info {
@@ -233,10 +257,32 @@ a {
   }
 }
 
+@-webkit-keyframes rightSide {
+  from {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
 @keyframes rightSide {
   from {
     opacity: 0;
     transform: translateX(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes leftSide {
+  from {
+    opacity: 0;
+    transform: translateX(-200px);
   }
   to {
     opacity: 1;
