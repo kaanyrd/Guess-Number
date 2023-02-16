@@ -106,9 +106,12 @@ a {
   font-size: 2.5rem;
   text-align: center;
   color: white;
-  max-width: 12rem;
+  width: 12rem;
   margin: 0 auto 1rem auto;
   /* margin-bottom: 1rem; */
+}
+.input::placeholder {
+  color: white;
 }
 .check {
   width: 9rem;
@@ -128,6 +131,7 @@ a {
   font-size: 1.4rem;
   text-transform: capitalize;
 }
+
 /* FIXME */
 @media screen and (max-width: 400px) {
   .app-center {
@@ -165,6 +169,7 @@ a {
 @media screen and (min-width: 1170px) {
   .app-center {
     overflow-x: hidden;
+    padding: 1rem;
   }
   .main-title {
     font-size: 4.3rem;
@@ -192,6 +197,7 @@ a {
   .score-info {
     border: 3px dashed white;
     padding: 0.5rem 2rem;
+    width: 30rem;
   }
   #secret-number {
     transition: all 0.8s ease-in-out;

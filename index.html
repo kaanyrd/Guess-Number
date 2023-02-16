@@ -21,11 +21,11 @@
     <title>Guess Number</title>
   </head>
   <body>
-    <section class="app">
+    <section class="app" id="app">
       <div class="app-center">
         <div class="top-side">
           <!-- FIXME -->
-          <a href="" class="btn again" id="againBtn">again !</a>
+          <button class="btn again" id="againBtn">again !</button>
           <p class="game-info">"Between 1 and 20"</p>
         </div>
         <div class="guess-side">
@@ -34,15 +34,23 @@
         </div>
         <div class="bottom-side">
           <div class="input-side">
-            <input type="number" class="input" />
+            <input
+              class="input"
+              id="input"
+              placeholder="Number"
+              type="number"
+            />
             <!-- FIXME -->
-            <a href="" class="btn check" id="checkBtn">check !</a>
+            <button class="btn check" id="checkBtn">check !</button>
           </div>
           <div class="score-info">
-            <h3 class="score-info-text">💬 start guessing...</h3>
-            <h4 class="score">🎯 score: <span class="scoreNumber">0</span></h4>
+            <h3 id="info-text" class="score-info-text">💬 start guessing...</h3>
+            <h4 id="score" class="score">
+              🎯 score: <span id="scoreNumber" class="scoreNumber">20</span>
+            </h4>
             <h4 class="highScore">
-              🥇 Highscore: <span class="highscoreNumber">0</span>
+              🥇 Highscore:
+              <span id="highScore" class="highscoreNumber">0</span>
             </h4>
           </div>
         </div>
