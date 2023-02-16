@@ -33,6 +33,7 @@ a {
   min-height: 100vh;
   display: flex;
   place-items: center;
+  position: relative;
   /* background: rgb(22, 114, 22); */
 }
 .app-center {
@@ -162,9 +163,6 @@ a {
 
 /* FIXME */
 @media screen and (max-width: 400px) {
-  .app-center {
-    border: none;
-  }
   .top-side {
     justify-content: center;
   }

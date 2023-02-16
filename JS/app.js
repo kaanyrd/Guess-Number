@@ -15,7 +15,7 @@ let score = 20;
 
 // RANDOM NUMBER
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(randomNumber);
+// console.log(randomNumber);
 
 // MESSAGE FUCNTION
 const messageFunction = (msg) => {
@@ -27,7 +27,7 @@ const messageFunction = (msg) => {
 // INPUT
 checkBtn.addEventListener("click", () => {
   let input = Number(inputValue.value);
-  console.log(input);
+  //   console.log(input, typeof input);
   if (!input) {
     messageFunction("❌ Please enter a valid input");
   } else if (input === randomNumber) {
